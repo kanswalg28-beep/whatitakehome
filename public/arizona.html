@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arizona Paycheck &amp; Income Tax Calculator 2026 | WhatITakeHome</title>
+  <meta name="description" content="Estimate your Arizona take-home pay for 2026. See federal tax, FICA and Arizona state tax for any salary. Free, calculated in your browser.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://whatitakehome.com/arizona.html">
+  <meta name="theme-color" content="#F9F6F0">
+
+  <!-- Social & OpenGraph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WhatITakeHome">
+  <meta property="og:title" content="Arizona Paycheck Calculator 2026 | WhatITakeHome">
+  <meta property="og:description" content="Free US income tax and paycheck calculator for 2026. See net take-home pay, federal tax, FICA and state tax. Your numbers are calculated in your browser and never sent to our servers.">
+  <meta property="og:url" content="https://whatitakehome.com/arizona.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arizona Paycheck Calculator 2026 | WhatITakeHome">
+  <meta name="twitter:description" content="Free US income tax and paycheck calculator for 2026. See net take-home pay, federal tax, FICA and state tax. Your numbers are calculated in your browser and never sent to our servers.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+<div class="container">
+  <!-- Elevated Archival Header (Swiss Ledger Aesthetic) -->
+  <header class="site-header">
+    <div class="header-left">
+      <a href="#" class="brand">
+        <div class="brand-emblem" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-title">WhatITakeHome</span>
+          <span class="brand-sub">US Tax Calculator</span>
+        </div>
+      </a>
+    </div>
+
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="#calculator" class="nav-link active">Calculator</a>
+      <a href="#visualizer" class="nav-link">3D Breakdown</a>
+      <a href="#ladder" class="nav-link">Tax Ladder</a>
+      <a href="index.html#matrix" class="nav-link">50-State Matrix</a>
+      <a href="index.html#education" class="nav-link">IRS Guide</a>
+      <a href="index.html#faq" class="nav-link">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cmd-k-trigger" id="cmd-k-trigger-btn" title="Open command palette or quick input">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <span>Command</span>
+        <span class="kbd">⌘K</span>
+      </button>
+      <button class="btn" id="share-btn" title="Copy link with current parameters">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+        <span>Share</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="trust-badges">
+      <span class="badge-pill privacy">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+        Your numbers never leave your browser
+      </span>
+    </div>
+    <h1 class="hero-title">Arizona Paycheck &amp; Income Tax Calculator (2026)</h1>
+    <p class="hero-subtitle">
+      Estimate your net take-home pay, federal tax, FICA and state tax for 2026, calculated instantly in your browser.
+    </p>
+  </section>
+
+  <!-- Quick Persona Presets -->
+  <div class="presets-row">
+    <span class="preset-label">Quick Scenarios:</span>
+    <button class="preset-chip" data-income="220000" data-state="CA" data-filing="single" data-401k="23000">SF Tech ($220k · CA)</button>
+    <button class="preset-chip" data-income="150000" data-state="NY" data-local="NYC" data-filing="single" data-401k="15000">NYC Finance ($150k · NY)</button>
+    <button class="preset-chip" data-income="110000" data-state="TX" data-filing="married" data-401k="10000">Austin Remote ($110k · TX)</button>
+    <button class="preset-chip" data-income="95000" data-state="FL" data-filing="single" data-401k="0">Miami Pro ($95k · FL)</button>
+    <button class="preset-chip" data-income="75000" data-state="WA" data-filing="single" data-401k="5000">Seattle ($75k · WA)</button>
+  </div>
+
+  <!-- Bento Calculator Grid -->
+  <main class="bento-grid" id="calculator">
+    <!-- Input Section -->
+    <section class="card input-section">
+      <div style="margin-bottom: 0.5rem;">
+        <h2 style="margin: 0; font-size: 1.25rem;">Financial Parameters</h2>
+      </div>
+
+      <!-- Gross Income with Dual Slider -->
+      <div>
+        <label for="income-input">Gross Annual Income</label>
+        <div class="input-with-icon">
+          <span class="currency-symbol">$</span>
+          <input type="text" inputmode="numeric" id="income-input" value="100,000" autocomplete="off">
+        </div>
+        <div class="slider-wrapper">
+          <input type="range" id="income-slider" min="10000" max="500000" step="1000" value="100000" aria-label="Income Slider">
+          <div class="slider-scale">
+            <span>$10k</span>
+            <span>$150k</span>
+            <span>$300k</span>
+            <span>$500k+</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- State Selection -->
+      <div>
+        <label for="state-select">Primary State</label>
+        <select id="state-select" data-default="AZ">
+          <!-- Populated by JS -->
+        </select>
+      </div>
+      
+      <!-- Local Tax (Dynamic) -->
+      <div id="local-tax-container" style="display: none;">
+        <label for="local-select">Local Tax Zone</label>
+        <select id="local-select">
+          <option value="none">None</option>
+        </select>
+      </div>
+
+      <!-- Tax Year & Filing Status (Side-by-Side) -->
+      <div class="form-row-2col">
+        <div>
+          <label for="year-select">Tax Year</label>
+          <select id="year-select">
+            <option value="2026" selected>2026 (Current)</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+          </select>
+        </div>
+        <div>
+          <label for="filing-select">Filing Status</label>
+          <select id="filing-select">
+            <option value="single">Single</option>
+            <option value="married">Married Filing Jointly</option>
+            <option value="hoh">Head of Household</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Relocation Arbitrage Toggle -->
+      <div>
+        <div class="compare-toggle-box">
+          <div>
+            <div style="font-weight: 700; font-size: 0.92rem; color: var(--color-text-primary);">Relocation Arbitrage</div>
+            <div style="font-size: 0.74rem; color: var(--color-text-muted);">Compare net take-home against another state</div>
+          </div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="compare-toggle">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div id="compare-state-container" style="display: none; margin-top: 0.65rem;">
+          <label for="compare-state-select" style="font-size: 0.8rem; color: var(--color-text-secondary);">Target Comparison State</label>
+          <select id="compare-state-select">
+            <!-- Populated by JS -->
+          </select>
+        </div>
+      </div>
+
+      <!-- Advanced Deductions Accordion -->
+      <div class="accordion" id="advanced-accordion">
+        <div class="accordion-header">
+          <span>Pre-Tax Deductions (401k & Healthcare)</span>
+          <svg class="accordion-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </div>
+        <div class="accordion-content">
+          <div>
+            <label for="deduct-401k">401(k) / 403(b) Contribution</label>
+            <div class="input-with-icon">
+              <span class="currency-symbol">$</span>
+              <input type="text" inputmode="numeric" id="deduct-401k" value="0" autocomplete="off">
+            </div>
+            <div class="hint" id="hint-401k">Reduces Federal & State income tax. Max $24,500 for 2026 (employee deferral limit).</div>
+          </div>
+          <div>
+            <label for="deduct-ira">Traditional IRA</label>
+            <div class="input-with-icon">
+              <span class="currency-symbol">$</span>
+              <input type="text" inputmode="numeric" id="deduct-ira" value="0" autocomplete="off">
+            </div>
+          </div>
+          <div>
+            <label for="deduct-health">Health Insurance Premiums</label>
+            <div class="input-with-icon">
+              <span class="currency-symbol">$</span>
+              <input type="text" inputmode="numeric" id="deduct-health" value="0" autocomplete="off">
+            </div>
+            <div class="hint">Pre-tax healthcare is exempt from both Income Tax and FICA.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Output Section -->
+    <section class="card output-section">
+      <!-- 5-Tier Frequency Switcher (HeyReliable Tip 15: Consistent UI) -->
+      <div class="freq-tabs">
+        <button class="freq-tab active" data-div="1">Annual</button>
+        <button class="freq-tab" data-div="12">Monthly</button>
+        <button class="freq-tab" data-div="26">Bi-Weekly</button>
+        <button class="freq-tab" data-div="52">Weekly</button>
+        <button class="freq-tab" data-div="2080">Hourly (2,080h)</button>
+      </div>
+
+      <!-- Relocation Arbitrage Comparison Banner -->
+      <div class="arbitrage-banner" id="arbitrage-banner">
+        <div class="arbitrage-header">
+          <span class="arbitrage-title" id="arbitrage-title">Relocation Arbitrage Advantage</span>
+          <span class="arbitrage-delta" id="arbitrage-delta">+$0 / yr</span>
+        </div>
+        <div id="arbitrage-desc" style="font-size: 0.88rem; color: var(--color-text-secondary); margin-bottom: 0.6rem;">
+          Take-home difference by moving state.
+        </div>
+        <div class="arbitrage-grid">
+          <div class="arbitrage-col">
+            <div class="col-state" id="col-state-orig">Current State</div>
+            <div class="col-val" id="col-val-orig">$0</div>
+          </div>
+          <div class="arbitrage-col">
+            <div class="col-state" id="col-state-target">Target State</div>
+            <div class="col-val" id="col-val-target">$0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Primary KPI Telemetry Boxes -->
+      <div class="results-grid">
+        <div class="result-box">
+          <div class="result-label">Net Take-Home</div>
+          <div class="result-value accent tabular-nums" id="out-take-home">$0</div>
+        </div>
+        <div class="result-box">
+          <div class="result-label">Total Taxes</div>
+          <div class="result-value deduction tabular-nums" id="out-total-tax">$0</div>
+        </div>
+        <div class="result-box">
+          <div class="result-label tooltip-trigger">
+            Effective Rate 
+            <span class="tooltip">Total taxes divided by gross income. The true blended percentage of your total compensation paid in taxes.</span>
+          </div>
+          <div class="result-value tabular-nums" id="out-effective-rate">0%</div>
+        </div>
+        <div class="result-box">
+          <div class="result-label tooltip-trigger">
+            Marginal Rate 
+            <span class="tooltip">The combined rate on your next dollar earned (Federal + State + Social Security + Medicare). Social Security stops at the annual wage base.</span>
+          </div>
+          <div class="result-value tabular-nums" id="out-marginal-rate">0%</div>
+        </div>
+      </div>
+
+      <!-- Interactive 3D Pie Chart -->
+      <div class="pie-3d-stage" id="visualizer">
+        <div class="pie-3d-wrapper" id="pie-3d-wrapper">
+          <canvas id="pie-3d-canvas" width="760" height="540" title="Click and drag to rotate in 3D"></canvas>
+          <div class="pie-3d-tooltip" id="pie-3d-tooltip"></div>
+        </div>
+
+        <!-- Interactive Legend Bar with Live Dollars & Percentages -->
+        <div class="pie-3d-legend" id="pie-3d-legend">
+          <div class="legend-item" data-slice="0">
+            <span class="legend-dot dot-net"></span>
+            <div class="legend-info">
+              <span class="legend-name">Take-Home</span>
+              <span class="legend-val tabular-nums" id="leg-net">$0 (0%)</span>
+            </div>
+          </div>
+          <div class="legend-item" data-slice="1">
+            <span class="legend-dot dot-fed"></span>
+            <div class="legend-info">
+              <span class="legend-name">Federal Tax</span>
+              <span class="legend-val tabular-nums" id="leg-fed">$0 (0%)</span>
+            </div>
+          </div>
+          <div class="legend-item" data-slice="2">
+            <span class="legend-dot dot-state"></span>
+            <div class="legend-info">
+              <span class="legend-name">State / Local</span>
+              <span class="legend-val tabular-nums" id="leg-state">$0 (0%)</span>
+            </div>
+          </div>
+          <div class="legend-item" data-slice="3">
+            <span class="legend-dot dot-fica"></span>
+            <div class="legend-info">
+              <span class="legend-name">FICA (SS & Med)</span>
+              <span class="legend-val tabular-nums" id="leg-fica">$0 (0%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Federal Progressive Tax Ladder -->
+      <div style="margin-top: 1rem;" id="ladder">
+        <div class="ladder-header">
+          <h3 class="ladder-title">Federal Progressive Tax Ladder</h3>
+          <span class="ladder-subtitle">Hover segment for tier breakdown</span>
+        </div>
+        <div class="tax-ladder" id="tax-ladder">
+          <!-- Populated by JS -->
+        </div>
+        <div class="ladder-labels">
+          <span>10%</span>
+          <span>12%</span>
+          <span>22%</span>
+          <span>24%</span>
+          <span>32%</span>
+          <span>35%</span>
+          <span>37%</span>
+        </div>
+      </div>
+
+      <!-- Ledger Breakdown Table -->
+      <div style="margin-top: 1.25rem;">
+        <table class="breakdown-table">
+          <tbody>
+            <tr>
+              <th>Gross Compensation</th>
+              <td class="amount tabular-nums" id="break-gross">$0</td>
+            </tr>
+            <tr class="sub-row">
+              <th>Pre-Tax Deductions (401k, Health)</th>
+              <td class="amount tabular-nums" id="break-deductions" style="color: var(--color-text-muted);">-$0</td>
+            </tr>
+            <tr class="sub-row">
+              <th>Federal Standard Deduction</th>
+              <td class="amount tabular-nums" id="break-std-ded" style="color: var(--color-text-muted);">-$0</td>
+            </tr>
+            <tr class="sub-row">
+              <th>Taxable Income Base</th>
+              <td class="amount tabular-nums" id="break-taxable-base" style="font-weight: 600;">$0</td>
+            </tr>
+            <tr>
+              <th>Federal Income Tax</th>
+              <td class="amount deduction tabular-nums" id="break-fed">$0</td>
+            </tr>
+            <tr>
+              <th>State Income Tax</th>
+              <td class="amount deduction tabular-nums" id="break-state">$0</td>
+            </tr>
+            <tr id="row-local" style="display:none;">
+              <th>Local City Surcharge</th>
+              <td class="amount deduction tabular-nums" id="break-local">$0</td>
+            </tr>
+            <tr>
+              <th>FICA (Social Security & Medicare)</th>
+              <td class="amount deduction tabular-nums" id="break-fica">$0</td>
+            </tr>
+            <tr>
+              <th style="color: var(--color-text-primary); font-weight: 700; font-size: 1.15rem; border: none; padding-top: 1.1rem;">Net Take-Home Pay</th>
+              <td class="amount positive tabular-nums" style="font-weight: 700; font-size: 1.15rem; border: none; padding-top: 1.1rem;" id="break-net">$0</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="calc-disclaimer" id="state-data-note"></p>
+        <p class="calc-disclaimer">Estimates for W-2 wages only. Excludes credits, itemized deductions, state payroll taxes (such as SDI) and local taxes other than those listed. Not tax advice. <a href="disclaimer.html">Read the full disclaimer</a>.</p>
+
+        <div style="margin-top: 1rem; display: flex; justify-content: flex-end;">
+          <button class="btn" id="copy-summary-btn" title="Copy clean Markdown summary for Reddit, Notion, or Slack">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Breakdown Summary</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Ad slot (reserved; stays hidden until ad code is placed inside) -->
+  <div class="ad-slot" id="ad-slot-after-calculator"></div>
+
+    <section class="state-guide" id="state-guide">
+    <h2>Arizona paycheck taxes in 2026</h2>
+    <p><strong>State income tax:</strong> Flat (2.5%). Arizona levies a flat individual income tax of 2.5% across taxable wage income, keeping withholding straightforward regardless of income bracket. State standard deductions reduce taxable wages before the flat rate applies.</p>
+    <p>For a single filer earning $100,000 with no pre-tax deductions, the estimate is $77,083 a year in take-home pay: $13,170 federal income tax, $2,098 Arizona income tax and $7,650 Social Security and Medicare, an effective rate of 22.9%.</p>
+    <h3 style="margin:1.25rem 0 .5rem;">Single filer, 2026</h3><div class="matrix-card"><table class="matrix-table"><thead><tr><th>Gross salary</th><th>Federal tax</th><th>Arizona tax</th><th>FICA</th><th>Take-home</th><th>Effective rate</th></tr></thead><tbody><tr><td class="tabular-nums"><strong>$50,000</strong></td><td class="tabular-nums">$3,820</td><td class="tabular-nums">$848</td><td class="tabular-nums">$3,825</td><td class="tabular-nums" style="font-weight:700;">$41,507</td><td class="tabular-nums">17.0%</td></tr><tr><td class="tabular-nums"><strong>$75,000</strong></td><td class="tabular-nums">$7,670</td><td class="tabular-nums">$1,473</td><td class="tabular-nums">$5,738</td><td class="tabular-nums" style="font-weight:700;">$60,119</td><td class="tabular-nums">19.8%</td></tr><tr><td class="tabular-nums"><strong>$100,000</strong></td><td class="tabular-nums">$13,170</td><td class="tabular-nums">$2,098</td><td class="tabular-nums">$7,650</td><td class="tabular-nums" style="font-weight:700;">$77,082</td><td class="tabular-nums">22.9%</td></tr><tr><td class="tabular-nums"><strong>$150,000</strong></td><td class="tabular-nums">$24,734</td><td class="tabular-nums">$3,348</td><td class="tabular-nums">$11,475</td><td class="tabular-nums" style="font-weight:700;">$110,443</td><td class="tabular-nums">26.4%</td></tr><tr><td class="tabular-nums"><strong>$200,000</strong></td><td class="tabular-nums">$36,734</td><td class="tabular-nums">$4,598</td><td class="tabular-nums">$14,339</td><td class="tabular-nums" style="font-weight:700;">$144,329</td><td class="tabular-nums">27.8%</td></tr></tbody></table></div>
+    <h3 style="margin:1.25rem 0 .5rem;">Married filing jointly, 2026</h3><div class="matrix-card"><table class="matrix-table"><thead><tr><th>Gross salary</th><th>Federal tax</th><th>Arizona tax</th><th>FICA</th><th>Take-home</th><th>Effective rate</th></tr></thead><tbody><tr><td class="tabular-nums"><strong>$50,000</strong></td><td class="tabular-nums">$1,780</td><td class="tabular-nums">$445</td><td class="tabular-nums">$3,825</td><td class="tabular-nums" style="font-weight:700;">$43,950</td><td class="tabular-nums">12.1%</td></tr><tr><td class="tabular-nums"><strong>$75,000</strong></td><td class="tabular-nums">$4,640</td><td class="tabular-nums">$1,070</td><td class="tabular-nums">$5,738</td><td class="tabular-nums" style="font-weight:700;">$63,552</td><td class="tabular-nums">15.3%</td></tr><tr><td class="tabular-nums"><strong>$100,000</strong></td><td class="tabular-nums">$7,640</td><td class="tabular-nums">$1,695</td><td class="tabular-nums">$7,650</td><td class="tabular-nums" style="font-weight:700;">$83,015</td><td class="tabular-nums">17.0%</td></tr><tr><td class="tabular-nums"><strong>$150,000</strong></td><td class="tabular-nums">$15,340</td><td class="tabular-nums">$2,945</td><td class="tabular-nums">$11,475</td><td class="tabular-nums" style="font-weight:700;">$120,240</td><td class="tabular-nums">19.8%</td></tr><tr><td class="tabular-nums"><strong>$200,000</strong></td><td class="tabular-nums">$26,340</td><td class="tabular-nums">$4,195</td><td class="tabular-nums">$14,339</td><td class="tabular-nums" style="font-weight:700;">$155,126</td><td class="tabular-nums">22.4%</td></tr></tbody></table></div>
+    <p class="calc-disclaimer">Computed with the calculator above using 2026 federal figures and the state rules described in our <a href="disclaimer.html">disclaimer</a>. No pre-tax deductions, credits or local taxes. Estimates only.</p>
+  </section>
+
+
+  <!-- Modern Clean Footer -->
+  <footer>
+    <div>
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+        <span class="brand-gem"></span>
+        <strong style="font-size: 1.15rem; color: var(--color-text-primary);">WhatITakeHome</strong>
+      </div>
+      <p class="footer-text">
+        A free US income tax and paycheck calculator. Calculations run in your browser using IRS tax schedules for 2024–2026. Estimates only; not tax advice.
+      </p>
+      <div style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 1rem; font-family: var(--font-mono);">
+        Based on IRS Rev. Proc. 2025-32 · Estimates only
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Popular State Guides</div>
+      <ul class="footer-links">
+        <li><a href="california.html">California Tax Calculator</a></li>
+        <li><a href="texas.html">Texas Tax Calculator</a></li>
+        <li><a href="new-york.html">New York Tax Calculator</a></li>
+        <li><a href="florida.html">Florida Tax Calculator</a></li>
+        <li><a href="washington.html">Washington Tax Calculator</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Calculators & Tools</div>
+      <ul class="footer-links">
+        <li><a href="#calculator">Paycheck Calculator</a></li>
+        <li><a href="#advanced-accordion">401(k) Tax Modeling</a></li>
+        <li><a href="#arbitrage-banner">State Comparison</a></li>
+        <li><a href="#ladder">IRS Tax Brackets</a></li>
+      </ul>
+      <div class="footer-col-title" style="margin-top: 1.25rem;">About</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About WhatITakeHome</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+<!-- Cmd+K Natural Language Quick-Input Modal -->
+<div class="modal-overlay" id="cmd-k-modal">
+  <div class="modal-content">
+    <label style="color: var(--color-text-secondary); font-size: 0.85rem; margin-bottom: 0.5rem; display: block; font-weight: 700;">
+      Natural Language Quick-Input
+    </label>
+    <input type="text" class="modal-input" id="cmd-k-input" placeholder="e.g. 150k CA single or 95000 Texas married" autocomplete="off">
+    <p style="font-size: 0.78rem; color: var(--color-text-muted); margin-top: 0.85rem;">
+      Supports shortcuts like: <span class="kbd">180k WA married</span>, <span class="kbd">120000 NYC single</span>. Press Enter to calculate instantly.
+    </p>
+  </div>
+</div>
+
+<script src="js/tax-data.js"></script>
+<script src="js/tax-engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
