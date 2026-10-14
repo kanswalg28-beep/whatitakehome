@@ -83,7 +83,7 @@ try {
 let packageValid = false;
 try {
   const pj = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-  packageValid = Boolean(pj.scripts && (pj.scripts.generate || pj.scripts.build) && pj.scripts.test);
+  packageValid = Boolean(pj.scripts && pj.scripts.build && pj.scripts.test);
 } catch (e) {}
 
 const notFoundValid = fs.existsSync(notFoundPath) && fs.readFileSync(notFoundPath, 'utf8').includes('404');

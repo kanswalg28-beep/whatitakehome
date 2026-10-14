@@ -2,6 +2,7 @@
 .chrome-tmp/
 .edge-tmp/
 screenshot*.png
+dist/
 
 # OS & Environment
 .DS_Store
