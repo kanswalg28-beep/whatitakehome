@@ -1,0 +1,12 @@
+# Temporary & Browser Testing Dirs
+.chrome-tmp/
+.edge-tmp/
+screenshot*.png
+
+# OS & Environment
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+npm-debug.log*
