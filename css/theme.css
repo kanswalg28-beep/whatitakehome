@@ -1,0 +1,92 @@
+:root {
+  /* 60% Dominant (Muted Linen Ivory Base) */
+  --color-canvas: #F9F6F0;
+  --color-surface: #F2EDE4;
+  --color-surface-hover: #ECE5D9;
+  --color-border: #E2DACD;
+  --color-border-subtle: #EDE7DC;
+
+  /* 30% Secondary (Oxidized Copper / Teal Slate Patina) */
+  --color-text-primary: #1A3438;
+  --color-text-secondary: #2E5A5E;
+  --color-text-muted: #53797D;
+  --color-track-inactive: #3D6E73;
+
+  /* 10% Accent (Burnished Brass Precision) */
+  --color-accent: #D4AF37;
+  --color-accent-hover: #B89327;
+  --color-accent-glow: rgba(212, 175, 55, 0.28);
+  --color-accent-soft: rgba(212, 175, 55, 0.14);
+
+  /* Semantic Archetypes */
+  --color-semantic-deduction: #B44335;       /* Federal tax / drag */
+  --color-semantic-state: #D07B43;           /* State / local surcharge */
+  --color-semantic-fica: #4F7E66;            /* Social security & medicare */
+  --color-semantic-positive: #1C5946;        /* Net take-home margin */
+  --color-semantic-positive-bg: #E9F4EE;
+  --color-semantic-deduction-bg: #FAECE9;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 1px 3px rgba(26, 52, 56, 0.05);
+  --shadow-md: 0 4px 14px -2px rgba(26, 52, 56, 0.07);
+  --shadow-lg: 0 10px 28px -4px rgba(26, 52, 56, 0.12);
+  --shadow-inset: inset 1px 1px 3px rgba(26, 52, 56, 0.06);
+
+  /* World-Class Modern Typography (Inter & JetBrains Mono loaded via index.html) */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.55;
+  font-size: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+label {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.tabular-nums {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "cv05" 1;
+  letter-spacing: -0.02em;
+}
+
+/* Global Semantic Text Utilities */
+.positive {
+  color: var(--color-semantic-positive) !important;
+}
+.deduction {
+  color: var(--color-semantic-deduction) !important;
+}

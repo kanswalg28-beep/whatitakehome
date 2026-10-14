@@ -1,0 +1,206 @@
+{
+  "AK": {
+    "name": "Alaska",
+    "type": "none"
+  },
+  "FL": {
+    "name": "Florida",
+    "type": "none"
+  },
+  "NV": {
+    "name": "Nevada",
+    "type": "none"
+  },
+  "NH": {
+    "name": "New Hampshire",
+    "type": "none"
+  },
+  "SD": {
+    "name": "South Dakota",
+    "type": "none"
+  },
+  "TN": {
+    "name": "Tennessee",
+    "type": "none"
+  },
+  "TX": {
+    "name": "Texas",
+    "type": "none"
+  },
+  "WA": {
+    "name": "Washington",
+    "type": "none"
+  },
+  "WY": {
+    "name": "Wyoming",
+    "type": "none"
+  },
+  "CA": {
+    "name": "California",
+    "type": "progressive"
+  },
+  "NY": {
+    "name": "New York",
+    "type": "progressive"
+  },
+  "NJ": {
+    "name": "New Jersey",
+    "type": "progressive"
+  },
+  "CO": {
+    "name": "Colorado",
+    "type": "flat"
+  },
+  "IL": {
+    "name": "Illinois",
+    "type": "flat"
+  },
+  "AL": {
+    "name": "Alabama",
+    "type": "progressive"
+  },
+  "AR": {
+    "name": "Arkansas",
+    "type": "progressive"
+  },
+  "AZ": {
+    "name": "Arizona",
+    "type": "flat"
+  },
+  "CT": {
+    "name": "Connecticut",
+    "type": "progressive"
+  },
+  "DE": {
+    "name": "Delaware",
+    "type": "progressive"
+  },
+  "GA": {
+    "name": "Georgia",
+    "type": "flat"
+  },
+  "HI": {
+    "name": "Hawaii",
+    "type": "progressive"
+  },
+  "ID": {
+    "name": "Idaho",
+    "type": "flat"
+  },
+  "IN": {
+    "name": "Indiana",
+    "type": "flat"
+  },
+  "IA": {
+    "name": "Iowa",
+    "type": "flat"
+  },
+  "KS": {
+    "name": "Kansas",
+    "type": "progressive"
+  },
+  "KY": {
+    "name": "Kentucky",
+    "type": "flat"
+  },
+  "LA": {
+    "name": "Louisiana",
+    "type": "flat"
+  },
+  "ME": {
+    "name": "Maine",
+    "type": "progressive"
+  },
+  "MD": {
+    "name": "Maryland",
+    "type": "progressive"
+  },
+  "MA": {
+    "name": "Massachusetts",
+    "type": "flat"
+  },
+  "MI": {
+    "name": "Michigan",
+    "type": "flat"
+  },
+  "MN": {
+    "name": "Minnesota",
+    "type": "progressive"
+  },
+  "MS": {
+    "name": "Mississippi",
+    "type": "flat"
+  },
+  "MO": {
+    "name": "Missouri",
+    "type": "progressive"
+  },
+  "MT": {
+    "name": "Montana",
+    "type": "progressive"
+  },
+  "NE": {
+    "name": "Nebraska",
+    "type": "progressive"
+  },
+  "NM": {
+    "name": "New Mexico",
+    "type": "progressive"
+  },
+  "NC": {
+    "name": "North Carolina",
+    "type": "flat"
+  },
+  "ND": {
+    "name": "North Dakota",
+    "type": "progressive"
+  },
+  "OH": {
+    "name": "Ohio",
+    "type": "progressive"
+  },
+  "OK": {
+    "name": "Oklahoma",
+    "type": "progressive"
+  },
+  "OR": {
+    "name": "Oregon",
+    "type": "progressive"
+  },
+  "PA": {
+    "name": "Pennsylvania",
+    "type": "flat"
+  },
+  "RI": {
+    "name": "Rhode Island",
+    "type": "progressive"
+  },
+  "SC": {
+    "name": "South Carolina",
+    "type": "progressive"
+  },
+  "UT": {
+    "name": "Utah",
+    "type": "flat"
+  },
+  "VT": {
+    "name": "Vermont",
+    "type": "progressive"
+  },
+  "VA": {
+    "name": "Virginia",
+    "type": "progressive"
+  },
+  "WV": {
+    "name": "West Virginia",
+    "type": "progressive"
+  },
+  "WI": {
+    "name": "Wisconsin",
+    "type": "progressive"
+  },
+  "DC": {
+    "name": "District of Columbia",
+    "type": "progressive"
+  }
+}
