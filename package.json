@@ -1,0 +1,22 @@
+{
+  "name": "whatitakehome",
+  "version": "1.0.0",
+  "description": "WhatITakeHome - Fast, 100% private client-side US income tax & paycheck calculator (2026)",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-states.js && node scripts/build-sitemap.js",
+    "test": "node scripts/verify-all.js && node scripts/prod-check.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "tax-calculator",
+    "paycheck-calculator",
+    "take-home-pay",
+    "income-tax",
+    "2026-taxes",
+    "us-tax-calculator",
+    "salary-calculator"
+  ],
+  "author": "WhatITakeHome",
+  "license": "MIT"
+}

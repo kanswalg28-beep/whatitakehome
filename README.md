@@ -72,6 +72,34 @@ node scripts/build-sitemap.js
 
 ---
 
+## ⚡ Deploying to Vercel
+
+WhatITakeHome is pre-configured for zero-configuration, instant deployment on [Vercel](https://vercel.com):
+
+### Option 1: Git Integration (Recommended)
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Connect your GitHub account and select repository **`kanswalg28-beep/whatitakehome`**.
+3. Framework Preset: **Other** (leave Root Directory as `./`).
+4. Click **Deploy**. Vercel will automatically detect `vercel.json`, enable Clean URLs, apply security headers, and serve the site globally at edge speed.
+
+### Option 2: Vercel CLI
+```bash
+# Install and run Vercel CLI
+npx vercel
+
+# Deploy to production
+npx vercel --prod
+```
+
+### Pre-Configured Vercel Capabilities
+- **Clean URLs (`cleanUrls: true`):** Access state pages cleanly as `/california`, `/texas`, or `/new-york` without `.html` extensions.
+- **Enterprise Security Headers:** Built-in `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy`, and strict `Permissions-Policy`.
+- **Edge Cache Optimization:** Stale-while-revalidate caching configured for static CSS/JS stylesheets and SVG emblems.
+- **Custom 404 Routing:** Beautiful fallback to branded `404.html` on nonexistent routes.
+
+---
+
 ## 📜 License
 
 MIT License. Designed and maintained for fast, transparent, and private personal finance calculations.
+
